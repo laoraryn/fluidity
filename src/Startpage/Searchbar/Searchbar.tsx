@@ -3,9 +3,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import duckduckgo from "../../data/pictures/duckduckgo.svg"
-import ecosia from "../../data/pictures/ecosia.svg"
 import google from "../../data/pictures/google.svg"
-import qwant from "../../data/pictures/qwant.svg"
 import * as Settings from "../Settings/settingsHandler"
 
 export const queryToken = "{{query}}"
@@ -60,8 +58,6 @@ export const Searchbar = () => {
   let searchSymbol = undefined
   if (engine.includes("duckduckgo")) searchSymbol = duckduckgo
   else if (engine.includes("google")) searchSymbol = google
-  else if (engine.includes("qwant")) searchSymbol = qwant
-  else if (engine.includes("ecosia")) searchSymbol = ecosia
 
   const redirectToSearch = (query: string) => {
     if (searchSettings.fastForward[query])
@@ -78,7 +74,7 @@ export const Searchbar = () => {
     <StyledSearchbarContainer>
       {searchSymbol && <SearchIcon src={searchSymbol} />}
       <StyledSearchbar
-        placeholder="Always stay clean!"
+        placeholder="hello"
         type="input"
         onKeyUp={e => e.which === 13 && redirectToSearch(e.currentTarget.value)}
         // eslint-disable-next-line jsx-a11y/no-autofocus
