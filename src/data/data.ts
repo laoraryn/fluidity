@@ -18,16 +18,6 @@ export interface linkGroup {
   links: dataElem[]
 }
 
-/* eslint-disable */
-/*
-──────▄▌▐▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀​▀▀▀▀▀▀▌
-───▄▄██▌█ BEEP BEEP
-▄▄▄▌▐██▌█ GAY PORN DELIVERY
-███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄​▄▄▄▄▄▄▌
-▀(@)▀▀▀▀▀▀▀(@)(@)▀▀▀▀▀▀▀▀▀▀▀▀▀​▀▀▀▀(@)▀
-*/
-/* eslint-enable */
-
 export const links: linkGroup[] = [
   {
     title: "Reddit",
@@ -172,21 +162,25 @@ export const images: dataElem[] = [
 
 export const searchEngines: dataElem[] = [
   {
+    label: "Google",
+    value: `https://www.google.com/search?q=${queryToken}&udm=14`,
+  },
+  {
+    label: "AZLyrics",
+    value: `https://search.azlyrics.com/search.php?q=${queryToken}`,
+  },
+  {
+    label: "Reddit",
+    value: `https://www.google.com/search?q=site:reddit.com ${queryToken}`,
+  },
+  {
+    label: "Youtube",
+    value: `https://www.youtube.com/results?search_query=${queryToken}`,
+  },
+  {
     label: "DuckDuckGo",
     value: `https://duckduckgo.com/?q=${queryToken}`,
-  },
-  {
-    label: "Google",
-    value: `https://www.google.com/search?q=${queryToken}`,
-  },
-  {
-    label: "Qwant",
-    value: `https://qwant.com/?q=${queryToken}`,
-  },
-  {
-    label: "Ecosia",
-    value: `https://ecosia.org/search/?q=${queryToken}`,
-  },
+  }
 ]
 
 export type FastForwards = Record<string, string>
